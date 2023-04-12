@@ -3,7 +3,7 @@ Feature: Compra de un iPhone en el carrito de compras
   Quiero poder agregar un iPhone a mi carrito de compras
   Para verlo en mi carrito y eliminarlo si así lo deseo
 
-  @Compra
+  @Test
   Scenario: Agregar un iPhone al carrito de compras y eliminar la compra
     Given que estoy en la pagina de inicio de la tienda en linea http://opencart.abstracta.us/
     And escribo "iPhone" en el campo de busqueda
