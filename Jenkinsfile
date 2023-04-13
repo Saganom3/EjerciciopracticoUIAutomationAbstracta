@@ -1,6 +1,8 @@
 pipeline {
   agent any
-
+  tools {
+    gradle "Gradle"
+  }
   stages {
     stage('Eliminar workspace') {
       steps {
@@ -10,25 +12,32 @@ pipeline {
 
     stage('Clonar repositorio') {
       steps {
-        echo 'Hello World'
         // Get some code from a GitHub repository
-        git 'https://github.com/Saganom3/Template_JavaSeleniumCucumber.git'
+        git 'https://github.com/Saganom3/EjerciciopracticoUIAutomationAbstracta.git'
 
       }
     }
 
     stage('Compilar y ejecutar pruebas') {
       steps {
-        // Run Gradle on a Windoa agent.
+        // Run Gradle on a Windows agent.
         bat "./gradlew clean build test --rerun-tasks"
-
-        // To run Maven on a Windows agent, use
-        // bat "mvn -Dmaven.test.failure.ignore=true clean package"  
       }
     }
     stage('Generar reporte Cucumber') {
       steps {
         cucumber '**/*.json'
+      }
+      post {
+        always {
+          publishHTML([allowMissing: false,
+            alwaysLinkToLastBuild: true,
+            keepAll: true,
+            reportDir: 'test-output/HtmlReport/',
+            reportFiles: 'ExtentHtml.html',
+            reportName: 'Cucumber Report'
+          ])
+        }
       }
     }
   }
