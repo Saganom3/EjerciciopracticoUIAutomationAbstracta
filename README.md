@@ -1,5 +1,7 @@
 # EjerciciopracticoUIAutomationAbstracta
 
+Ruta Repositorio Github: https://github.com/Saganom3/EjerciciopracticoUIAutomationAbstracta.git
+
 * Para este proyecto se uso el driver de Chrome versión (ChromeDriver 111.0.5563.64)asegurese de tener  la versión mencionada en su maquina
 
 * Asegúrate de tener Gradle 7 o superior instalado(Configurados con variables de entorno correspondientes)
