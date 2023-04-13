@@ -1,6 +1,6 @@
 # EjerciciopracticoUIAutomationAbstracta
 
-Para este proyecto se uso al driver de Chrome versión (ChromeDriver 111.0.5563.64)asegurese de tener  la versión menciona
+Para este proyecto se uso al driver de Chrome versión (ChromeDriver 111.0.5563.64)asegurese de tener  la versión mencionada en su maquina
 
 Asegúrate de tener Gradle 7 o superior instalado(Configurados con variables de entorno correspondientes)
 
