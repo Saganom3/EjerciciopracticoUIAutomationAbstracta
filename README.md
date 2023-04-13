@@ -1,5 +1,8 @@
 # EjerciciopracticoUIAutomationAbstracta
 
+Asegúrate de tener Gradle 7 o superior instalado(Configurados con variables de entorno correspondientes)
+Asegúrate de tener JDK 11 instalado
+
 EJECUCIÓN SCRIPT IDE
 
 Para ejecutar un script de Gradle en el runner desde el IDE, sigue estos pasos:
